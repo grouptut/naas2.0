@@ -1,0 +1,42 @@
+.parallax {
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    transform-origin: bottom center;
+    will-change: transform;
+    transform: translate3d(0, calc(var(--pct) * 35%), 0) scale3d(calc(var(--pct)/2 + 1), calc(var(--pct)/2 + 1), 1);
+  }
+  .parallax div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transform-origin: bottom center;
+    transform: translate3d(0, 0, 0);
+  }
+  .parallax div.p1 {
+    transform: translate3d(0, calc(var(--pct) * -20.0%), 0);
+  }
+  .parallax div.p2 {
+    transform: translate3d(0, calc(var(--pct) * -17.5%), 0);
+  }
+  .parallax div.p3 {
+    transform: translate3d(0, calc(var(--pct) * -15.0%), 0);
+  }
+  .parallax div.p4 {
+    transform: translate3d(0, calc(var(--pct) * -12.5%), 0);
+  }
+  .parallax div.p5 {
+    transform: translate3d(0, calc(var(--pct) * -10.0%), 0);
+  }
+  .parallax div.p6 {
+    transform: translate3d(0, calc(var(--pct) *  -7.5%), 0);
+  }
+  .parallax div.p7 {
+    transform: translate3d(0, calc(var(--pct) *  -5.0%), 0);
+  }
+  .parallax div.p8 {
+    transform: translate3d(0, calc(var(--pct) *  -2.5%), 0);
+  }
