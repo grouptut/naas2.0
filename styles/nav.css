@@ -1,6 +1,3 @@
-
-
-
 .overlay-navigation {
   position: fixed;
   z-index: 99;
@@ -151,10 +148,11 @@ nav li:nth-of-type(5){background-color: #99B998}
 
 
 /* ====================================
-Burger king
+Burger
 ==================================== */
 
 .open-overlay {
+  visibility: hidden;
   position: fixed;
   right: 5rem;
   top: 3.2rem;

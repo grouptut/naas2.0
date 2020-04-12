@@ -33,3 +33,24 @@ $('.open-overlay').click(function() {
     nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
   }
 })
+
+function inviz(par) {
+	return $(document).scrollTop() + $(window).height() > $(par).offset().top && $(document).scrollTop() - $(par).offset().top < $(par).height();
+}
+
+$(document).ready(function () {
+	$(window).scroll(function () {
+		if ($(window).scrollTop() != 0) {
+      let c = 'header';
+      if (inviz(c)) {
+        $('.open-overlay').addClass('animated hinge');
+      }
+      else {
+        $('.open-overlay').css('visibility', 'visible');
+        $('.open-overlay').addClass('animated jello');
+
+      } 
+    }
+	});
+});
+
