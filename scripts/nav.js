@@ -11,7 +11,9 @@ $('.open-overlay').click(function() {
 
   overlay_navigation.toggleClass('overlay-active');
   if (overlay_navigation.hasClass('overlay-active')) {
-
+    $('html').css('overflow-y', 'hidden');
+    $('.open-overlay').css('visibility', 'visible');
+    $('.open-overlay').addClass('animated lightSpeedIn');
     top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
     middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
     bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
@@ -22,6 +24,7 @@ $('.open-overlay').click(function() {
     nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
     nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
   } else {
+    $('html').css('overflow-y', 'scroll');
     top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
     middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
     bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
@@ -31,6 +34,7 @@ $('.open-overlay').click(function() {
     nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
     nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
     nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+    gggg(0);
   }
 })
 
@@ -40,17 +44,24 @@ function inviz(par) {
 
 $(document).ready(function () {
 	$(window).scroll(function () {
-		if ($(window).scrollTop() != 0) {
-      let c = 'header';
-      if (inviz(c)) {
-        $('.open-overlay').addClass('animated hinge');
-      }
-      else {
-        $('.open-overlay').css('visibility', 'visible');
-        $('.open-overlay').addClass('animated jello');
-
-      } 
-    }
+    gggg(1);
 	});
 });
 
+function gggg(pp){
+  let check = true;
+  if(pp){
+    check = ($(window).scrollTop() != 0);
+  }
+  if (check) {
+    let c = 'header';
+    if (inviz(c)) {
+      $('.open-overlay').removeClass('animated lightSpeedIn');
+      $('.open-overlay').addClass('animated hinge');
+    }
+    else {
+      $('.open-overlay').css('visibility', 'visible');
+      $('.open-overlay').addClass('animated lightSpeedIn');
+    } 
+  }
+}

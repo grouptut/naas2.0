@@ -55,5 +55,8 @@ p, a {
     height: 700px;
 }
 
-
-
+#c {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
