@@ -12,11 +12,11 @@ $(document)
     });
 
 $(document).on("mousemove", function (e) {
-    var mouseX = e.pageX;
-    var mouseY = e.pageY;
+    let mouseX = e.pageX;
+    let mouseY = e.pageY;
 });
 
-var cursor = $(".cursor");
+let cursor = $(".cursor");
 
 $("a, .menu-toggle").on("mouseenter", function () {
     cursor.addClass("active");
