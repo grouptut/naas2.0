@@ -3,6 +3,7 @@
 @import "preloader.css";
 @import "nav.css";
 @import "animate.min.css";
+@import "cursor.css";
 
 ::-webkit-scrollbar {
   width: 0px;

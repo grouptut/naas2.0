@@ -1,6 +1,8 @@
 include("scripts/pre.js");
 include("scripts/headerImg.js");
 include("scripts/nav.js");
+include("scripts/cursor.js");
+
 
 function include(url) {
     let script = document.createElement('script');
